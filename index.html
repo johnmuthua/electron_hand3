@@ -12,5 +12,42 @@
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
+
+    <br>
+    <input type="button" value="Connect to mysql" id="btn" />
+
+    <script>
+      document.getElementById('btn').addEventListener("click", () =>{
+        var mysql = require("mysql");
+
+        //Database credentials
+        var connection = mysql.createConnection({
+          host : 'localhost',
+          user : 'root',
+          password: null,
+          database : 'mylife'
+        });
+
+        //connection
+        connection.connect((err) => {
+          if(err){
+            return console.log(err.stack);
+          }
+          console.log('Connection successfully established');
+        });
+        
+        $queryString = 'SELECT * FROM `name`; ';
+        connection.query($queryString, (err,rows,fields) =>{
+          if(err){
+            return console.log('An error occured',err);
+          }
+          console.log($queryString);
+        });
+        //close connection
+        connection.end(() =>{
+          console.log("Connection terminaned")
+        });
+      }, false)
+    </script>
   </body>
 </html>
