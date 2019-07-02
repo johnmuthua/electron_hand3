@@ -27,8 +27,9 @@ document.getElementById('btn').addEventListener("click", () =>{
         return console.log('An error occured',err);
       }
 
-      for (var index = 0; index < 20; index++){
+      for (var index = 0; index < rows.length; index++){
         console.log(rows[index]['title']);
+        document.getElementById('demo').innerHTML += index;
         document.getElementById('demo').innerHTML += rows[index]['title'];
         document.getElementById('demo').innerHTML += '<br/>'
       }

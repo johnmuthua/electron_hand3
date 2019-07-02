@@ -21,6 +21,17 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
+  let loginWindow
+
+  loginWindow = new BrowserWindow({
+    parent:top, modal: true, show: false})
+    loginWindow.loadURL(url.format({
+      pathname:path.join(__dirname, './models.login.html'),
+      protocol:'file',
+      slashes:true
+    }))
+  
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
