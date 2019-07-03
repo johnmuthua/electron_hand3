@@ -26,3 +26,33 @@ body, html {
       padding-right:25%;
 
   }
+
+  .form-two{
+    padding-top:20%;
+    padding-left:20%;
+    padding-right:20%;
+  }
+
+  #btn-login{
+    border:1px solid red;
+    border-radius: 5px;
+  }
+
+  #btn-login:hover{
+    background: green;
+    border-radius: 5px;
+    border:#fff;
+    color:#fff;
+  }
+  .bg2{
+    /* The image used */
+    background-image: url("./imgs/write.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
