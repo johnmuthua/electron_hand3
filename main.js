@@ -77,7 +77,7 @@ function createWindows() {
         }
       })
       handoverWindow.loadURL(url.format({
-        pathname:path.join(__dirname, '/models/handover.html'),
+        pathname:path.join(__dirname, '/models/createhandover.html'),
         protocol: 'file',
         slashes: true,
       }))

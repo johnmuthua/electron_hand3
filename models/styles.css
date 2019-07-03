@@ -46,7 +46,8 @@ body, html {
   }
   .bg2{
     /* The image used */
-    background-image: url("./imgs/write.jpg");
+    background-image: url("./imgs/twriter.jpg");
+
   
     /* Full height */
     height: 100%; 

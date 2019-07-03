@@ -34,6 +34,7 @@ document.getElementById('btn-login').addEventListener('click',()=>{
         for(let index = 0; index < rows.length; index++){
             if (rows[index]['password']==password && rows[index]['first_name'] == username){
                 console.log('logged in as ',username);
+                window.location.pathname='register.html';
                 break;
             }
             console.log('wrong credentials');
