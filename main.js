@@ -6,6 +6,7 @@ require('electron-reload')(__dirname);
 
 let mainWindow
 let loginWindow
+let handoverWindow
 
 function createWindows() {
   //Creating the Main Window of the Project
@@ -35,6 +36,9 @@ function createWindows() {
             },
             {
               label:'Display Handover',
+              click: function(){
+                handoverWindow.show()
+              }
             },
             {type:"separator"},
             {
@@ -63,6 +67,21 @@ function createWindows() {
         slashes: true,
       }))
       loginWindow.webContents.openDevTools()
+
+      let handoverWindow = new BrowserWindow({
+        width:800,
+        height:600, 
+        show: false,
+        webPreferences:{
+          nodeIntegration: true
+        }
+      })
+      handoverWindow.loadURL(url.format({
+        pathname:path.join(__dirname, '/models/handover.html'),
+        protocol: 'file',
+        slashes: true,
+      }))
+      handoverWindow.webContents.openDevTools()
 }
 
 app.on('ready', createWindows)
