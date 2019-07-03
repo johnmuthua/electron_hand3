@@ -2,11 +2,13 @@ const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path')
 const url=require('url')
 const mysql = require('mysql')
+require('electron-reload')(__dirname);
 
 let mainWindow
 let loginWindow
 
 function createWindows() {
+  //Creating the Main Window of the Project
       mainWindow = new BrowserWindow({
         width:800,
         height:600,
@@ -19,19 +21,48 @@ function createWindows() {
         protocol: 'file',
         slashes: true
       }))
-
+      mainWindow.webContents.openDevTools()
 
       let menu = Menu.buildFromTemplate([
         {
           label: 'Menu',
           submenu:[
-            {label:'Get time'},
-            {label:'Kill application'},
-            {label:'Exit'}
+            {
+              label:'Login',
+              click: function(){
+                  loginWindow.show()
+              }
+            },
+            {
+              label:'Display Handover',
+            },
+            {type:"separator"},
+            {
+              label:'Exit',
+              click(){
+                app.quit()
+              }
+            }
           ]
         }
       ])
       Menu.setApplicationMenu(menu);
+
+      //Login Window Accessible through the Menu
+      let loginWindow = new BrowserWindow({
+        width:800,
+        height:600, 
+        show: false,
+        webPreferences:{
+          nodeIntegration: true
+        }
+      })
+      loginWindow.loadURL(url.format({
+        pathname:path.join(__dirname, '/models/login.html'),
+        protocol: 'file',
+        slashes: true,
+      }))
+      loginWindow.webContents.openDevTools()
 }
 
 app.on('ready', createWindows)
