@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Barriecito|Lobster|PT+Sans+Caption&display=swap');
+
+
+/* Index styles */
 body, html {
     height: 100%;
   }
@@ -18,6 +22,8 @@ body, html {
   h1{
       font-size: 24px;
       color:#fff;
+      font-family: 'PT Sans Caption', sans-serif;
+      font-size: 40px;
   }
 
   #heading{
@@ -43,6 +49,9 @@ body, html {
     border-radius: 5px;
     border:#fff;
     color:#fff;
+
+
+  /* createhandover styles */
   }
   .bg2{
     /* The image used */
@@ -58,7 +67,7 @@ body, html {
     background-size: cover;
   }
 
-  .handheader{
+  .handheader{ 
     background-color: rgb(130, 12, 145);
     padding-top:40px;
 
@@ -66,8 +75,15 @@ body, html {
   }
    .handheader h1{
      padding-bottom: 10px;
+     font-family: 'Barriecito', cursive;
+     font-size: 40px;
    }
 
    form{
       padding-top:20px;
+   }
+   
+   h3{
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
    }
