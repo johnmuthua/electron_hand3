@@ -4,45 +4,57 @@
 	<title>Create HandOver</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
 
 	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
-<body class="container">
--form***
--handovertextarea***
--current time to be handled by js
--servirity -dropdown{high, medium, none}
--Status -dropdown {not attended, sent mechanic, mechanic on site, Arrested, waiting for parts, decommisioned}
-<h1>Handover Message</h1>
-<form>
-	<!-- Text Box Area -->
-	<div class="form-group">
-	<label for="comment">Handover:</label>
-	<textarea class="form-control" rows="5" id="hand_message"></textarea>
-	</div>
+<body>
+<div class="handheader">
+	<h1 class="text-center">Handover</h1>
+</div>
+<div class="container">
+		<form>
+				<!-- Text Box Area -->
+				<div class="form-group">
+				<label for="comment"> <h3>Handover Message</h3></label>
+				<textarea class="form-control" rows="5" id="hand_message" placeholder="Write any Issues Here..."></textarea>
+				</div>
+			
+			<!-- Radio Button-->
+			<h3>Priority</h3>
+			<div class="custom-control custom-radio custom-control-inline">
+			  <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+			  <label class="custom-control-label" for="defaultInline1">High</label>
+			</div>
+			
+			<!-- Default inline 2-->
+			<div class="custom-control custom-radio custom-control-inline">
+			  <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+			  <label class="custom-control-label" for="defaultInline2">Medium</label>
+			</div>
+			
+			<!-- Default inline 3-->
+			<div class="custom-control custom-radio custom-control-inline">
+			  <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+			  <label class="custom-control-label" for="defaultInline3">None</label>
+			</div>
 
-<!-- Radio Button-->
-<h3>Priority</h3>
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-  <label class="custom-control-label" for="defaultInline1">High</label>
+			<hr>
+		
+			<!-- radio button 2 -->
+			
+			<!-- Radio Button-->
+			<hr>
+			<!-- on off -->
+			<button type="button" class="btn btn-dark btn-lg">Submit</button>
+
+		</form>
 </div>
 
-<!-- Default inline 2-->
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-  <label class="custom-control-label" for="defaultInline2">Medium</label>
-</div>
-
-<!-- Default inline 3-->
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-  <label class="custom-control-label" for="defaultInline3">None</label>
-</div>
-
+<hr>
 <!-- radio button 2 -->
 
 <!-- on off -->
